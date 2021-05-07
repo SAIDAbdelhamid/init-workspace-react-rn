@@ -1,0 +1,26 @@
+{
+  "name": "init-workspace-react-rn",
+  "version": "1.0.0",
+  "description": "Make easy to start develop project with reactjs & react native",
+  "main": "index.js",
+  "repository": "https://github.com/SAIDAbdelhamid/init-workspace-react-rn",
+  "author": "SAID Abdelhamid",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "app": "yarn workspace mobile-app start",
+    "app:clear": "yarn workspace mobile-app clear",
+    "app:update": "yarn workspace mobile-app update",
+    "app:publish": "cd mobile-app && expo publish",
+    "app:build-ios": "cd mobile-app && expo build:ios",
+    "app:build-android": "cd mobile-app && expo build:android",
+    "web": "yarn workspace web-app start",
+    "web:build": "yarn workspace web-app build",
+    "web:eject": "yarn workspace web-app eject",
+    "postinstall": "concurrently --kill-others-on-fail \"cd mobile-app && expo-yarn-workspaces postinstall\" \"node prepareconfig.js\""
+  },
+  "workspaces": [
+    "mobile-app",
+    "web-app"
+  ]
+}
