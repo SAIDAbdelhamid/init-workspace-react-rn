@@ -17,10 +17,18 @@
     "web": "yarn workspace web-app start",
     "web:build": "yarn workspace web-app build",
     "web:eject": "yarn workspace web-app eject",
+    "common": "yarn workspace common build && yarn workspace web-app add common@1.0.0 --force && yarn workspace mobile-app add common@1.0.0 --force",
     "postinstall": "concurrently --kill-others-on-fail \"cd mobile-app && expo-yarn-workspaces postinstall\" \"node prepareconfig.js\""
   },
   "workspaces": [
     "mobile-app",
-    "web-app"
-  ]
+    "web-app",
+    "common",
+    "config",
+    "assets"
+  ],
+  "dependencies": {
+    "concurrently": "^5.3.0",
+    "fs-extra": "^9.0.1"
+  }
 }

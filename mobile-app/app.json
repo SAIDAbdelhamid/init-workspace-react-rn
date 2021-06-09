@@ -1,32 +1,79 @@
 {
-  "expo": {
-    "name": "mobile-app",
-    "slug": "mobile-app",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "updates": {
-      "fallbackToCacheTimeout": 0
-    },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "ios": {
-      "supportsTablet": true
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      }
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
+    "expo": {
+      "name": "app_name",
+      "description": "app_description",
+      "slug": "app_name",
+      "privacy": "public",
+      "platforms": [
+        "ios",
+        "android"
+      ],
+      "notification": {
+        "icon": "./assets/images/logo96x96.png"
+      },
+      "version": "1",
+      "orientation": "portrait",
+      "icon": "./assets/images/logo1024x1024.png",
+      "splash": {
+        "image": "./assets/images/splash.png",
+        "resizeMode": "cover",
+        "backgroundColor": "#ffffff"
+      },
+      "updates": {
+        "fallbackToCacheTimeout": 0
+      },
+      "assetBundlePatterns": [
+        "**/*"
+      ],
+      "packagerOpts": {
+        "config": "metro.config.js"
+      },
+      "ios": {
+        "supportsTablet": true,
+        "usesAppleSignIn": true,
+        "bundleIdentifier": "exemple : com.app.vtc",
+        "infoPlist": {
+          "NSLocationAlwaysUsageDescription": "undefined",
+          "NSLocationAlwaysAndWhenInUseUsageDescription": "undefined",
+          "NSLocationWhenInUseUsageDescription": "undefined",
+          "NSCameraUsageDescription": "undefined",
+          "NSPhotoLibraryUsageDescription": "undefined",
+          "ITSAppUsesNonExemptEncryption":false,
+          "UIBackgroundModes": [
+            "audio",
+            "location",
+            "fetch"
+          ]
+        },
+        "config": {
+          "googleMapsApiKey": "exemple : AIzaSyB8j8NI3ALgY7GB4xtIBUBF05yrq_i5OJU"
+        },
+        "googleServicesFile": "./GoogleService-Info.plist",
+        "buildNumber": "1"
+      },
+      "android": {
+        "package": "exemple : com.app.vtc",
+        "versionCode": 1,
+        "permissions": [
+          "CAMERA",
+          "READ_EXTERNAL_STORAGE",
+          "WRITE_EXTERNAL_STORAGE",
+          "ACCESS_FINE_LOCATION",
+          "ACCESS_COARSE_LOCATION",
+          "CAMERA_ROLL",
+          "FOREGROUND_SERVICE",
+          "ACCESS_BACKGROUND_LOCATION"
+        ],
+        "googleServicesFile": "./google-services.json",
+        "config": {
+          "googleMaps": {
+            "apiKey": "exemple : AIzaSyB8j8NI3ALgY7GB4xtIBUBF05yrq_i5OJU"
+          }
+        },
+        "useNextNotificationsApi": true
+      },
+      "facebookScheme": "fbexemple : 368079077927398",
+      "facebookAppId": "exemple : 368079077927398",
+      "facebookDisplayName": "app_name"
     }
-  }
 }
